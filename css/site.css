@@ -42,6 +42,19 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--secondary-color);
 }
 
+.Fizz{
+    color:#0474ba
+}
+
+.Buzz{
+    color:#F0DB4F
+}
+
+.FizzBuzz{
+    color:aqua
+    font-weight: bold;
+}
+
 code[class*="language-"],
         pre[class*="language-"] {
             white-space: pre-wrap;
