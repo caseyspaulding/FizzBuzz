@@ -33,7 +33,7 @@
 
 <body class="d-flex flex-column h-100">
 <!-- ==== Nav Section ===== -->
-<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-black">
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-info">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="img/LOGO_cs_white_only_crop.png" class="d-inline-block align-text-top"
         alt="Casey Spaulding Logo" width="37" height="28"> FizzBuzz </a>
@@ -66,19 +66,57 @@
 <!-- ==== Main Section ===== -->
 <main class="flex-shrink-0">
 <div class="container">
-
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col col-lg-4 border-end boarder-info border-2">
+                <h1 class="display-5 lh-1 mb-3">FizzBuzz: A Coding Project</h1>
+                    <h4 class="lead">When it counts you Fizz Buzz. A javascript coding exercise using loops. 
+                        Write a program that prints the numbers from 1 to 100 and for multiples of '3' display <strong>"Fizz"</strong> instead of 
+                        the number and for the multiples of '5' display <strong>"Buzz"</strong>. If a multiple of both display 
+                        <strong>"FizzBuzz". </strong>
+                <h2 class="mt-5 border-bottom border-info border-2">Instructions</h2>
+                <p>Enter a fizz value and a buzz value. Press the button and the the value will appear. </p>
+            </div>
+            <div class="col col-lg-8">
+                <div>
+                    <h5>Enter Values</h5>
+                    <form class="row gy-2 gx-3" action="">
+                        <div class="col">
+                            <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value" 
+                                value=3 aria-label="Fizz Value">
+                        </div>
+                        <div class="col">
+                            <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value" 
+                                value=5 aria-label="Buzz Value">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                            <button id="btnSubmit" type="button" class="mt-2 btn btn-dark btn-lg">Buzz It!</button>
+                        </div>
+                    </form>
+                    <h2 class="mt-5 border-bottom border-info border-2">Results</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <tbody id="results">
+                                <!-- Results Go Here-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </main>
  <!-- ==== Footer Section ===== -->
- <footer class="footer sticky-footer mt-auto py-2 text-white bg-black">
+ <footer class="footer sticky-footer mt-auto py-2 text-white bg-info">
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-3">
-            <div class="col order-last order-lg-first text-white bg-black gy-2">
+            <div class="col order-last order-lg-first text-white bg-info gy-2">
                 <div class="col py-1">&copy; 2022 Casey Spaulding | casey.spaulding@me.com</div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-center-start justify-content-lg-center">
-                    <img src="/img/topLogoBig99.png" alt="Casey Spaulding Logo">  
+                    <img src="/img/topLogoSig.png" alt="Casey Spaulding Logo">  
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
                 <div class="row">
@@ -91,14 +129,25 @@
         </div>
     </div>
 </footer>
+
+<template id="fbTemplate">
+    <tr>
+        <td></td><!-- index 0 -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td> 
+    </tr>
+</template>
  <!-- Bootstrap JS -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
 
  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
 </script>
 <script src="js/site.js"></script>
-
-
+<script>
+    document.getElementById("btnSubmit").addEventListener("click",getValues);
+</script>
 
 </body>
 
