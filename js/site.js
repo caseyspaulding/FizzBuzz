@@ -16,7 +16,7 @@ function getValues(){
         //we need to call fizzBuzz
         let fbArray = fizzBuzz(fizzValue, buzzValue);
         //we need to call displayNumbers
-        displayNumbers(fbArray);
+        displayData(fbArray);
     } else{
         alert("You must enter integers");
     }
@@ -45,7 +45,7 @@ function fizzBuzz(fizzValue, buzzValue)
         }
     }
     
-    returnArray;
+    return returnArray;
 
 }
 
@@ -68,11 +68,11 @@ function displayData(fbArray){
 
         //grab the td to put into array
         let rowCols = tableRow.querySelectorAll("td");
-        rowCols[0].textContent = fbData[i];
-        rowCols[1].textContent = fbData[i+1];
-        rowCols[2].textContent = fbData[i+2];
-        rowCols[3].textContent = fbData[i+3];
-        rowCols[4].textContent = fbData[i+4];
+        rowCols[0].textContent = fbArray[index];
+        rowCols[1].textContent = fbArray[index+1];
+        rowCols[2].textContent = fbArray[index+2];
+        rowCols[3].textContent = fbArray[index+3];
+        rowCols[4].textContent = fbArray[index+4];
 
         tableBody.appendChild(tableRow);
         
