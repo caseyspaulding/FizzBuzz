@@ -43,16 +43,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .Fizz{
-    color:#0474ba
+    color:#0474ba;
+    font-weight: bolder;
 }
 
 .Buzz{
-    color:#F0DB4F
+    color:#f8350e;
+    font-weight: bolder;
 }
 
 .FizzBuzz{
-    color:aqua
-    font-weight: bold;
+    color:rgb(11, 171, 171);
+    font-weight: bolder;
 }
 
 code[class*="language-"],
